@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Jira-Kayako Link Extension",
+  "version": "1.0",
+  "description": "Converts Zendesk Ticket IDs in Jira to clickable Kayako links",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.atlassian.net/*", 
+        "*://*.jira.com/*",
+        "*://*.jira-dev.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["activeTab"]
+}
